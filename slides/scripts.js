@@ -106,8 +106,21 @@
       return;
     }
     const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : '';
-    const isInteractive = e.target && (e.target.isContentEditable || ['a','input','textarea','select','button','label'].includes(tag) || e.target.closest('a,button'));
-    if (isInteractive) return;
+    // Treat clicks on phase-content as interactive to "open" hidden pieces without advancing
+    const isInteractive = e.target && (
+      e.target.isContentEditable ||
+      ['a','input','textarea','select','button','label'].includes(tag) ||
+      e.target.closest('a,button,.phase-content')
+    );
+    if (isInteractive) {
+      // If clicking inside a compare slide, try to advance phase instead of slide
+      const current = slideEls[index];
+      if (current && isCompare(current)) {
+        e.preventDefault();
+        if (!advanceWithinSlide()) return; // do nothing if already fully revealed
+      }
+      return;
+    }
     e.preventDefault();
     next();
   });

@@ -260,6 +260,10 @@ code { padding: 2px 6px; border-radius: 6px; }
   transform: translateY(8px) scale(0.98);
   transition: opacity .35s ease, transform .35s ease;
 }
+.mt-16 { margin-top: 16px !important; }
+.mt-20-center { margin-top: 20px !important; text-align: center !important; }
+.mt-12-center { margin-top: 12px !important; text-align: center !important; }
+.w-260 { width: 260px !important; height: auto !important; }
 .slide.compare.phase-3 .notes-block {
   opacity: 1;
   transform: none;
@@ -459,6 +463,9 @@ li .li-desc {
 
   /* Badges */
   .badge { font-size: 12px; padding: 4px 8px; }
+  
+  /* Keep all phased content visible on mobile */
+  .deck.mobile .phase-content { opacity: 1 !important; }
 }
 
 /* --- Phased content visibility (moved from inline) --- */
@@ -482,7 +489,7 @@ li .li-desc {
   margin-bottom: 20px !important;
 }
 .slide.narrow .toolkit-grid {
-  max-width: 1120px;
+  max-width: 1400px;
   margin: 22px auto 0;
   gap: 22px !important;
 }
