@@ -10,7 +10,7 @@ A concise slide deck about bridging hot‑culture and cold‑culture communicati
 
 ## View the slides
 
-- Online deck: https://dev-muhammad.github.io/cultural-bridge
+- Online deck: [https://dev-muhammad.github.io/cultural-bridge](https://dev-muhammad.github.io/cultural-bridge/slides/index.html)
 - Outline as Markdown: [slides.md](slides.md)
 
 ## What the slides cover
@@ -29,4 +29,5 @@ A concise slide deck about bridging hot‑culture and cold‑culture communicati
 ## Attribution
 
 - Draws on ideas from the book “Foreign to Familiar” by Sarah A. Lanier — https://www.foreigntofamiliar.com/
+
 - All credit for the book and its ideas belongs to the author. Image used for educational purposes.
